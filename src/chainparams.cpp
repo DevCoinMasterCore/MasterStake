@@ -129,9 +129,9 @@ public:
         consensus.nTargetTimespanV2 = 30 * 60;
         consensus.nTargetSpacing = 1 * 60;
         consensus.nTimeSlotLength = 15;
-        consensus.nMASTERCoinSupplyMintHeight = 800001;
-        consensus.nMASTERCoinSupply = 16511200 * COIN;
-        consensus.sMASTERCoinSupplyMintAddress = "mX8RHJLS9guycYe7knzphoyoWQNW117f8D";
+        //consensus.nMASTERCoinSupplyMintHeight = ;
+        //consensus.nMASTERCoinSupply = 0 * COIN;
+        //consensus.sMASTERCoinSupplyMintAddress = "";
 
         // spork keys
         consensus.strSporkPubKey = "04237fb3480348d332af58f17fdb2f6bae3204539805edc74e2aea7d9c302b4f77e6ae337c2347ddc1278f14607e3d9538279f82fcba154d86b55a4c4a4bf1c45b";
@@ -152,18 +152,18 @@ public:
         consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight                     = 330;
         consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].nActivationHeight         = 320;
         consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].nActivationHeight          = 350;
-        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].nActivationHeight    = 800001;
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].nActivationHeight        = 800001;
-        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight        = 800001;
+        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].nActivationHeight    = 10000001;
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].nActivationHeight        = 10000001;
+        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight        = 10000001;
 
         consensus.vUpgrades[Consensus::UPGRADE_POS].hashActivationBlock                     = uint256S("84ce0f65f4261b1d1e951c9a10f283c1c31d9915bc6e07eac170dc8803341d3e");
         consensus.vUpgrades[Consensus::UPGRADE_POS_V2].hashActivationBlock                  = uint256S("de10b92f53b0ee686ce9393dbe0a175bfec8e3a1ec9b0a12d15dacdffa614217");
         consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock                   = uint256S("134cf44ffbe2b8abfddad62e42fbe1ac48e00cec282cd620aebd80c0eb2cb001");
         consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].hashActivationBlock       = uint256S("de10b92f53b0ee686ce9393dbe0a175bfec8e3a1ec9b0a12d15dacdffa614217");
         consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].hashActivationBlock        = uint256S("6d41821d7438c430d602d96fee51807e7a3fb8412a456a8e34082541ab10b2a0");
-        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].hashActivationBlock  = uint256S("64c3ba555ff22fc6a4bddb646a0a38a406a36adf7e896ea97971917c0914cf99");
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].hashActivationBlock      = uint256S("64c3ba555ff22fc6a4bddb646a0a38a406a36adf7e896ea97971917c0914cf99");
-        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].hashActivationBlock      = uint256S("64c3ba555ff22fc6a4bddb646a0a38a406a36adf7e896ea97971917c0914cf99");
+        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].hashActivationBlock  = uint256S("0x00");
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].hashActivationBlock      = uint256S("0x00");
+        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].hashActivationBlock      = uint256S("0x00");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -176,11 +176,10 @@ public:
         pchMessageStart[3] = 0x19;
         nDefaultPort = 23990;
 
-        vSeeds.push_back(CDNSSeedData("seeder", "seeder.masterstake.top"));
-	    vSeeds.push_back(CDNSSeedData("seed1",  "45.94.209.55"));
-        vSeeds.push_back(CDNSSeedData("seed2",  "84.54.23.196"));
+        vSeeds.push_back(CDNSSeedData("seed1", "194.163.183.214"));
+	    vSeeds.push_back(CDNSSeedData("seed2",  "185.197.251.164"));
         vSeeds.push_back(CDNSSeedData("seed3",  "164.68.123.250"));
-        vSeeds.push_back(CDNSSeedData("seed4",  "167.86.80.59"));
+        
 
          base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 110);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 87);
